@@ -1,0 +1,23 @@
+{
+    "terraform" : {
+        "resourceGroupName" : "pandemicdataserviceTest",
+        "region" : "westus",
+        "cosmos" : {
+            "accountName" : "pandemicdatabase11223654"
+        },
+        "containerRegistry" : {
+            "name" : "pandemiccontainerregistry11223654"
+        }
+    },
+    "kubernetes" : {
+        "cpus" : 4,
+        "memory" : 4096,
+        "nodes" : 2,
+        "kubernetesVersion" : "1.22.4"
+    },
+    "dataLoaderJob" : {
+        "imageName" : "data-loader-job",
+        "imageTag" : "0.0.1",
+        "containerRegistryName" : "pandemiccontainerregistry11223654"
+    }
+}
